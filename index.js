@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
   // tells express app to listen on port 3000 after connection is made
   console.log("Connected to db!");
-  app.listen(5000, () => console.log("Server Up and running"));
+  app.listen(process.env.PORT || 5000, () => console.log("Server Up and running"));
 });
 
 // recognizes our app's template files
