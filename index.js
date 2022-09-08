@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 // contains config for connecting to MongoDB
 const dotenv = require("dotenv");
+// mongoose creates a connection between MongoDB and the Node.js JavaScript runtime environment
 const mongoose = require("mongoose");
 
 // import datamodel for todo task
@@ -19,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
   // tells express app to listen on port 3000 after connection is made
   console.log("Connected to db!");
-  app.listen(3000, () => console.log("Server Up and running"));
+  app.listen(5000, () => console.log("Server Up and running"));
 });
 
 // recognizes our app's template files
