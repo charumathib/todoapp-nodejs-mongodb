@@ -1,1 +1,2 @@
 # todoapp-nodejs-mongodb
+This is a todo app built using NodeJS, MongoDB and some helper libraries (Express, Mongoose) following [this tutorial](https://medium.com/@diogo.fg.pinheiro/simple-to-do-list-app-with-node-js-and-mongodb-chapter-1-c645c7a27583). The app is deployed on Heroku and can be accessed [here](https://intense-refuge-24106.herokuapp.com/edit/631a811b6c57fe70df4e91e4).

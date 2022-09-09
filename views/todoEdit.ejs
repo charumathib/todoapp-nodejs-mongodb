@@ -1,3 +1,4 @@
+<!-- this page is almost identical to todo.ejs. It is redirected to when the user tries to edit a todo -->
 <!DOCTYPE html>
 <head>
   <title>Todo App</title>
@@ -24,6 +25,7 @@
       <ul class="todo-list">
         <% todoTasks.forEach(details => { %> <% if (details._id == idTask) { %>
         <li class="todo-list-item">
+          <!-- allows user to edit the todo they have clicked "edit" on -->
           <form action="/edit/<%= details._id %>" method="POST">
             <input type="text" value="<%= details.content %>" name="content" />
             <button type="submit">Confirm</button>
@@ -31,6 +33,7 @@
           </form>
         </li>
         <% } else { %>
+        <!-- renders all other todos normally -->
         <li class="todo-list-item">
           <div class="todo-list-item-name"><%= details.content %></div>
           <a href="/edit/<%= details._id %>" class="edit">
